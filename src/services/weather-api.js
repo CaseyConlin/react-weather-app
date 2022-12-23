@@ -1,4 +1,4 @@
-import { fetchWeather, fetchLocation } from "./config";
+import { fetchWeather, fetchLocation } from "./api-info";
 import { v4 } from "uuid";
 
 const errorHandler = (apiResponse) => {
