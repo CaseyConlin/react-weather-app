@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import { useState, useEffect } from "react";
 import { fetchWeatherData } from "./services/weather-api";
 import { ForecastWrapper } from "./UI/forecast-wrapper";
