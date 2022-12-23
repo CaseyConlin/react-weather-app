@@ -79,5 +79,6 @@ input {
     margin: 0;
     width: 9rem;
     font-size: 1rem;
+    max-width: 12rem;
   }
 }
