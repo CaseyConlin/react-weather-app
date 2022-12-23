@@ -2,7 +2,7 @@ import { fetchWeather, fetchLocation } from "./api-info";
 import { v4 } from "uuid";
 
 const errorHandler = (apiResponse) => {
-  if (apiResponse.status == 429) {
+  if (apiResponse.status === 429) {
     return "Daily weather data request limit reached. Contact site admin for more info.";
   } else {
     return "There was a problem getting weather data. Contact site admin for more info.";
