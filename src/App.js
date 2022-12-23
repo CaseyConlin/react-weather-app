@@ -37,7 +37,6 @@ function App() {
   //Controlled input component.
   const zipHandler = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
     setZip(e.target.value);
   };
 

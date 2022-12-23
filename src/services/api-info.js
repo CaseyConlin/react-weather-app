@@ -2,7 +2,7 @@ const APIkey = process.env.REACT_APP_API_KEY;
 
 export const fetchLocation = (zip) => {
   return (
-    "http://api.openweathermap.org/geo/1.0/zip?zip=" +
+    "https://api.openweathermap.org/geo/1.0/zip?zip=" +
     zip +
     ",US&appid=" +
     APIkey
