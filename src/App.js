@@ -1,23 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
+import { useState, useEffect } from "react";
+import { fetchWeatherData } from "./services/weather-api";
+import { ForecastWrapper } from "./UI/forecast-wrapper";
+import { ForecastToday } from "./components/forecast-today";
+import { ForecastList } from "./components/forecast-list";
+import { ZipForm } from "./components/zip-form";
+import { ErrorItem } from "./components/error-item";
 
 function App() {
+  const [zip, setZip] = useState("12472");
+  const [weather, setWeather] = useState([]);
+  const [error, setError] = useState();
+
+  // Get weather and handle erros.
+  const getWeather = () => {
+    fetchWeatherData(zip)
+      .then(setWeather)
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  //Validate the ZIP code and get weather data.
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (!/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zip)) {
+      setError("Please enter a valid 5 digit ZIP code.");
+      return;
+    } else {
+      setError("");
+      getWeather();
+    }
+  };
+
+  //Controlled input component.
+  const zipHandler = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    setZip(e.target.value);
+  };
+
+  //Fetch weather on page load.
+  useEffect(() => {
+    getWeather();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ZipForm value={zip} onChange={zipHandler} onClick={submitHandler} />
+
+      {error ? <ErrorItem errorMessage={error} /> : ""}
+
+      <ForecastToday items={weather} />
+
+      <ForecastWrapper>
+        <ForecastList items={weather} />
+      </ForecastWrapper>
     </div>
   );
 }

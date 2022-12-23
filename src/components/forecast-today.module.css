@@ -1,0 +1,294 @@
+.today-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .today-container {
+    width: 95%;
+    margin: auto;
+  }
+}
+.forecast-today {
+  display: flex;
+  flex-direction: column;
+  background: #bce1ef77;
+  border: 1px black solid;
+  box-shadow: 4px 3px 5px gray;
+  padding: 1rem;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.forecast-today:after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  background: #bce1efdc;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  left: -30%; /* change value as required */
+  bottom: 50%; /* change value as required */
+}
+
+/* Background Desktop */
+@media only screen and (min-width: 992px) {
+  .forecast-today:after {
+    width: 1200px;
+    left: 20%; /* change value as required */
+    bottom: 50%; /* change value as required */
+  }
+}
+
+/* Location Section */
+.location {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.location h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.location h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.location h5 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 0.5rem 0 0;
+}
+
+/* Location Section Desktop */
+@media only screen and (min-width: 992px) {
+  .location h2 {
+    font-size: 2.5rem;
+  }
+  .location h3 {
+    font-size: 2rem;
+    margin: 0.75rem 0;
+  }
+
+  .location h5 {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+}
+/* Weather Details Container Tablet*/
+@media only screen and (min-width: 768px) {
+  .weather-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+  }
+}
+
+/* Weather Details Container Desktop */
+@media only screen and (min-width: 992px) {
+  .weather-details {
+    align-items: flex-start;
+  }
+}
+
+/* Day and Date Section */
+.date {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+.week-day {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0.7rem 0.4rem;
+}
+
+/* Image and Description Tablet */
+@media only screen and (min-width: 768px) {
+  .image-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Image Section */
+.forecast-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.7rem 0 0.5rem;
+}
+
+.forecast-image {
+  border-radius: 50%;
+  padding: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.155);
+  border-radius: 50%;
+}
+
+/* Weather Description Section */
+.weather-description {
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0.4rem 0;
+}
+
+/* Weather Description Section Tablet */
+@media only screen and (min-width: 768px) {
+  .weather-description {
+    order: -1;
+  }
+}
+
+/* Weather Description Section Desktop */
+@media only screen and (min-width: 768px) {
+  .weather-description {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+}
+
+/* Temp & Precipitation Section Tablet */
+@media only screen and (min-width: 768px) {
+  .temp-precipitation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Temp & Precipitation Section Desktop */
+@media only screen and (min-width: 992px) {
+  .temp-precipitation-container {
+    justify-content: flex-start;
+    margin: 1rem 0;
+  }
+}
+
+/* Temperature Section */
+.temps-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0.8rem 0rem;
+  padding: 0;
+}
+.temps-container div {
+  flex: 1 1 0;
+  padding: 0;
+}
+.high-temp {
+  width: 2rem;
+  height: 2rem;
+  fill: #ec6e4c;
+}
+.temp {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.deg {
+  font-size: calc(100% - 40%);
+  vertical-align: top;
+  font-weight: 300;
+}
+
+.low-temp {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #124fe5;
+}
+.low {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Temperature Section Tablet */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .temps-container {
+    flex-direction: column;
+  }
+
+  .temps-container div {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Temperature Section Desktop */
+@media only screen and (min-width: 992px) {
+  .temps-container div {
+    flex: 0 0 12rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .high-temp {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .temp {
+    font-size: 2rem;
+  }
+  .deg {
+    font-size: calc(100% - 40%);
+  }
+
+  .low-temp {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .low {
+    font-size: 1.7rem;
+  }
+}
+
+/* Precipitation Section */
+.precipitation {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0.4rem 0 1rem;
+}
+.umbrella {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #48484a;
+  vertical-align: bottom;
+  margin-right: 0.7rem;
+  margin-bottom: 0.6 rem;
+}
+
+/* Precipitation Section Desktop*/
+
+@media only screen and (min-width: 992px) {
+  .precipitation {
+    font-size: 1.7rem;
+  }
+  .umbrella {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.8rem;
+  }
+}

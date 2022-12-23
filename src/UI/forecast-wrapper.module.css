@@ -1,0 +1,23 @@
+.forecast-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .forecast-container {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .forecast-container {
+    flex-direction: row;
+  }
+}
+
+.forecast-container > div:nth-of-type(odd) {
+  background: #4dafd385;
+}
+.forecast-container > div:nth-of-type(even) {
+  background: #bce1ef77;
+}

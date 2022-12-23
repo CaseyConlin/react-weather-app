@@ -1,0 +1,258 @@
+.forecast-day {
+  margin: 5px;
+  border: 1px black solid;
+  box-shadow: 4px 3px 5px gray;
+  display: flex;
+  flex: 1 1 0px;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 992px) {
+  .forecast-day {
+    margin: 0.3rem;
+
+    flex-direction: column;
+    width: 0;
+  }
+}
+
+.forecast-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.forecast-image {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.155);
+  margin: 0.3rem;
+  width: 4rem;
+}
+@media only screen and (min-width: 992px) {
+  .forecast-image {
+    margin: 0.625rem;
+    width: 6.5rem;
+  }
+}
+
+.forecast-details {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 768px) {
+  .forecast-details {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .forecast-details {
+    text-align: center;
+    flex-direction: column;
+    padding: 0px 0.625rem 3rem;
+  }
+}
+
+/* Day & Month Section */
+.time-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  margin: 0 0.5rem;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.week-day {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* Day & Month Section Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .time-date {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 2.5rem;
+  }
+
+  .week-day {
+    font-size: 1.8rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+}
+
+/* Day & Month Section Large*/
+@media only screen and (min-width: 992px) {
+  .time-date {
+    align-items: center;
+    text-align: center;
+    margin: 0.2rem 0;
+  }
+
+  .week-day {
+    font-size: 2rem;
+  }
+
+  .date {
+    font-size: 1.2rem;
+  }
+}
+
+/* Temperature Section */
+.temps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.7rem;
+}
+
+.high-temp {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #ec6e4c;
+}
+.temp {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.deg {
+  font-size: calc(100% - 40%);
+  vertical-align: top;
+  font-weight: 300;
+}
+
+.low-temp {
+  width: 1rem;
+  height: 1rem;
+  fill: #124fe5;
+}
+.low {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Temperature Section Tablet */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .temps-container {
+    flex-direction: row;
+    margin: 0 2rem;
+  }
+  .high-temp {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .temp {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .low {
+    font-size: 1.5rem;
+  }
+}
+
+/* Temperature Section Large */
+@media only screen and (min-width: 992px) {
+  .temps-container {
+    text-align: center;
+    margin: 1.25rem 0;
+  }
+  .high-temp {
+    width: 2rem;
+    height: 2rem;
+  }
+  .temp {
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .low-temp {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .low {
+    font-size: 1.6rem;
+  }
+}
+
+/* Weather Conditions Section */
+.weather-condtions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  justify-self: flex-start;
+  margin-left: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.umbrella {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #48484a;
+  vertical-align: bottom;
+  margin-right: 3px;
+}
+
+.rain-chance {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Weather Conditions Section Tablet */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .weather-condtions {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .rain-chance {
+    font-size: 1.2rem;
+  }
+}
+
+/* Weather Conditions Section Larege */
+@media only screen and (min-width: 992px) {
+  .weather-condtions {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rain-chance {
+    font-size: 1.2rem;
+  }
+}
