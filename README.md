@@ -8,17 +8,17 @@ For more info contact Casey Conlin at casey.conlin@gmail.com
 
 <div style="width:75%; margin:50px auto;">
 
-<img src ="./src/images/desktop-screenshot.png?raw=true"  alt="Desktop screenshot">
+<img src ="./src/images/desktop-screenshot.png?raw=true"  width="75%" alt="Desktop screenshot">
 
 </div>
 
 <div style="width:40%; margin: auto;">
 
-<img src ="./src/images/tablet-screenshot.png?raw=true"  alt="Tablet screenshot">
+<img src ="./src/images/tablet-screenshot.png?raw=true" width="40%" alt="Tablet screenshot">
 
 </div>
 <div style="width:30%; margin: 50px auto;">
 
-<img src ="./src/images/mobile-screenshot.png?raw=true" width="50%"  alt="Mobile screenshot">
+<img src ="./src/images/mobile-screenshot.png?raw=true" width="30%"  alt="Mobile screenshot">
 
 </div>
