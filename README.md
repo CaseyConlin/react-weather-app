@@ -17,7 +17,8 @@ For more info contact Casey Conlin at casey.conlin@gmail.com
 <img src ="./src/images/tablet-screenshot.png?raw=true" width="40%" alt="Tablet screenshot">
 
 </div>
-<div style="width:30%; margin: 50px auto;">
+
+<div style="width:30%; margin:50px auto;">
 
 <img src ="./src/images/mobile-screenshot.png?raw=true" width="30%"  alt="Mobile screenshot">
 
