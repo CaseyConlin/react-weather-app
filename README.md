@@ -19,6 +19,6 @@ For more info contact Casey Conlin at casey.conlin@gmail.com
 </div>
 <div style="width:30%; margin: 50px auto;">
 
-<img src ="./src/images/mobile-screenshot.png?raw=true"  alt="Mobile screenshot">
+<img src ="./src/images/mobile-screenshot.png?raw=true" width="50%"  alt="Mobile screenshot">
 
 </div>
