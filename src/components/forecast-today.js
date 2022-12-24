@@ -23,7 +23,7 @@ export const ForecastToday = ({ items }) => {
               <img
                 className={styles["forecast-image"]}
                 src={
-                  "http://openweathermap.org/img/wn/" + item.icon + "@2x.png"
+                  "https://openweathermap.org/img/wn/" + item.icon + "@2x.png"
                 }
                 alt={item.weather + " icon"}
               />

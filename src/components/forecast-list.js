@@ -11,7 +11,7 @@ export const ForecastList = ({ items }) => {
       <div className={styles["forecast-image-container"]}>
         <img
           className={styles["forecast-image"]}
-          src={"http://openweathermap.org/img/wn/" + item.icon + "@2x.png"}
+          src={"https://openweathermap.org/img/wn/" + item.icon + "@2x.png"}
           alt={item.weather + " icon"}
         />
       </div>
