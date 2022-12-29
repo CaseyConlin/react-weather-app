@@ -3,13 +3,13 @@ import { ReactComponent as Umbrella } from "../images/umbrella-solid.svg";
 import { ReactComponent as HighTemp } from "../images/temperature-full-solid.svg";
 import { ReactComponent as LowTemp } from "../images/temperature-empty-solid.svg";
 
-export const ForecastToday = ({ items }) => {
+export const ForecastToday = ({ item }) => {
   // Map over weather API repsonse data for
   // first element to build responsive elements
   // for today's weather.
 
-  return items.slice(0, 1).map((item) => (
-    <div className={styles["today-container"]} key={item.key}>
+  return (
+    <div className={styles["today-container"]}>
       <div className={styles["forecast-today"]}>
         <div className={styles["location"]}>
           <h2>Weather Forecast</h2>
@@ -62,5 +62,5 @@ export const ForecastToday = ({ items }) => {
         </div>
       </div>
     </div>
-  ));
+  );
 };

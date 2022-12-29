@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { fetchWeatherData } from "./services/weather-api";
 import { ForecastWrapper } from "./UI/forecast-wrapper";
 import { ForecastToday } from "./components/forecast-today";
-import { ForecastList } from "./components/forecast-list";
+import { ForecastList as ForecastListItem } from "./components/forecast-list";
 import { ZipForm } from "./components/zip-form";
 import { ErrorItem } from "./components/error-item";
 
@@ -45,16 +45,18 @@ function App() {
     getWeather();
   }, []);
 
+  const [today, ...week] = weather;
+
   return (
     <div className="App">
       <ZipForm value={zip} onChange={zipHandler} onClick={submitHandler} />
 
       {error ? <ErrorItem errorMessage={error} /> : ""}
 
-      <ForecastToday items={weather} />
+      {today ? <ForecastToday item={today} /> : ""}
 
       <ForecastWrapper>
-        <ForecastList items={weather} />
+        {week.map(item => <ForecastListItem key={item.key} item={item} />)}
       </ForecastWrapper>
     </div>
   );
