@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { fetchWeatherData } from "./services/weather-api";
-import { ForecastWrapper } from "./UI/forecast-wrapper";
+import { ForecastWrapper } from "./components/forecast-wrapper";
 import { ForecastToday } from "./components/forecast-today";
 import { ForecastList as ForecastListItem } from "./components/forecast-list";
 import { ZipForm } from "./components/zip-form";
@@ -56,7 +56,9 @@ function App() {
       {today ? <ForecastToday item={today} /> : ""}
 
       <ForecastWrapper>
-        {week.map(item => <ForecastListItem key={item.key} item={item} />)}
+        {week.map((item) => (
+          <ForecastListItem key={item.key} item={item} />
+        ))}
       </ForecastWrapper>
     </div>
   );
