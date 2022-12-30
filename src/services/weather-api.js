@@ -1,4 +1,4 @@
-import { fetchWeather, fetchLocation } from "./api-info";
+import { locationURL, weatherURL } from "./api-info";
 import { v4 } from "uuid";
 
 const errorHandler = (apiResponse) => {
@@ -14,7 +14,7 @@ export const fetchWeatherData = async (zip) => {
 
   //Convert ZIP code to lattitude & longitude
   //data for submission to weather API.
-  const response = await fetch(fetchLocation(zip));
+  const response = await fetch(locationURL(zip));
   if (!response.ok) {
     throw Error(errorHandler(response));
   }
@@ -25,7 +25,7 @@ export const fetchWeatherData = async (zip) => {
   // Get weather data for next 8 days,
   // and return as an array
   const response2 = await fetch(
-    fetchWeather(locationData.latt, locationData.long)
+    weatherURL(locationData.latt, locationData.long)
   );
   if (!response2.ok) {
     throw Error(errorHandler(response2));
