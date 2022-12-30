@@ -4,8 +4,6 @@ import { ReactComponent as HighTemp } from "../images/temperature-full-solid.svg
 import { ReactComponent as LowTemp } from "../images/temperature-empty-solid.svg";
 
 export const ForecastListItem = ({ item }) => {
-  // Map over weather API repsonse data to build
-  // responsive elements.
   return (
     <div className={styles["forecast-day"]}>
       <div className={styles["forecast-image-container"]}>
