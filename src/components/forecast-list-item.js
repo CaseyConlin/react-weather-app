@@ -3,7 +3,7 @@ import { ReactComponent as Umbrella } from "../images/umbrella-solid.svg";
 import { ReactComponent as HighTemp } from "../images/temperature-full-solid.svg";
 import { ReactComponent as LowTemp } from "../images/temperature-empty-solid.svg";
 
-export const ForecastList = ({ item }) => {
+export const ForecastListItem = ({ item }) => {
   // Map over weather API repsonse data to build
   // responsive elements.
   return (

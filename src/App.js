@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { fetchWeatherData } from "./services/weather-api";
 import { ForecastWrapper } from "./components/forecast-wrapper";
 import { ForecastToday } from "./components/forecast-today";
-import { ForecastList as ForecastListItem } from "./components/forecast-list";
+import { ForecastListItem } from "./components/forecast-list-item";
 import { ZipForm } from "./components/zip-form";
 import { ErrorItem } from "./components/error-item";
 
